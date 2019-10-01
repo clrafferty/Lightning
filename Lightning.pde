@@ -1,6 +1,10 @@
+double xini=0;
+double xfini=0;
+double yini=0;
+double yfini=0;
 void setup()
 {
-  size(300,300);
+  size(500,500);
 }
 void draw()
 {
@@ -55,10 +59,28 @@ popMatrix();
 ellipse(170,220,12,30);
 ellipse(220,230,12,20);
 
+noStroke();
+fill(200);
+rect(280,220,70,20);
+pushMatrix();
+translate(315,230);
+rotate(PI/6);
+ellipse(33,-23,15,30);
+ellipse(20,-25,12,30);
+popMatrix();
+ellipse(330,220,12,30);
+ellipse(280,230,12,20);
 
 }
 void mousePressed()
 {
+	for(int radi = 0;radi<PI;radi+=.1){
+		while(xfini<500&&xfini>0){
+			stroke(0);
+			xfini=xini +Math.random()*10;
+			yfini=yini+Math.random()*10;
+		}
+	}
 
 }
 
