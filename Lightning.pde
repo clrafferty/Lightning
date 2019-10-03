@@ -11,7 +11,7 @@ void draw()
 {
 
   //face
-stroke(0);
+noStroke();
 fill(224, 214, 171);
 ellipse(250,300,300,350);
 //tongue
@@ -82,25 +82,26 @@ void mousePressed(){
 
   pushMatrix();
   translate(250,250);
-for(int radi = 0;radi<100;radi+=1){
+for(int radi = 0;radi<150;radi+=1){
     rotate(radi*2*PI/100);
     xini = 0;
     yini = 0;
     xfini = 0;
     yfini = 0;
-while(xfini<250&&xfini>=-250){
+while(xfini<400&&xfini>=-400){
+	strokeWeight(2);
       line((float)xini,(float)yini,(float)xfini,(float)yfini);
-      stroke(0);
+      stroke((int)(150*Math.random()));
       xini=xfini;
-      xfini=xfini+Math.random()*10;
+      xfini=xfini+Math.random()*40;
       yini=yfini;
-      yfini=yfini+Math.random()*10;
+      yfini=yfini+Math.random()*40;
     }
 
   }
   popMatrix();
 	 //face
-stroke(0);
+noStroke();
 fill(224, 214, 171);
 ellipse(250,300,300,350);
 //tongue
